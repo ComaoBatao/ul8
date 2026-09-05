@@ -10,12 +10,12 @@ import { getStorage } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-
 // Firestore/Storage Security Rules, não em esconder estes valores.
 // ================================================================
 const firebaseConfig = {
-  apiKey: "COLOCA_AQUI",
-  authDomain: "COLOCA_AQUI.firebaseapp.com",
-  projectId: "COLOCA_AQUI",
-  storageBucket: "COLOCA_AQUI.firebasestorage.app",
-  messagingSenderId: "COLOCA_AQUI",
-  appId: "COLOCA_AQUI"
+  apiKey: "AIzaSyCsu4f3EBsNfAAR-2HkmeAZxpCrIAOAz0s",
+  authDomain: "ul8-archive.firebaseapp.com",
+  projectId: "ul8-archive",
+  storageBucket: "ul8-archive.firebasestorage.app",
+  messagingSenderId: "950349065344",
+  appId: "1:950349065344:web:146deeef4552ef57d0ca65"
 };
 
 const app = initializeApp(firebaseConfig);
