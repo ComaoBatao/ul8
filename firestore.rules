@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.uid == "COLOCA_AQUI_O_TEU_ADMIN_UID";
+    }
+
+    match /posts/{postId} {
+      // Todos podem consultar as novidades.
+      allow read: if true;
+
+      // Só a tua conta Firebase pode criar, editar ou apagar.
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Tudo o que não estiver explicitamente permitido fica bloqueado.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
