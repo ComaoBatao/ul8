@@ -165,3 +165,6 @@ footer { border-top: 1px solid #171717; color: #4a4a4a; font-size: .65rem; lette
 .error-detail { display: block; color: #666; font-size: .62rem; letter-spacing: .08em; }
 .broken-image { opacity: .18; }
 @keyframes statusPulse { 50% { opacity: .35; } }
+[hidden] {
+  display: none !important;
+}
