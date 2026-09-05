@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="UL8 Archive — novidades, fotografias e descobertas do servidor UL8." />
+  <title>UL8 Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="logo-wrap">
+      <img id="siteLogo" src="assets/ulsmp8.png" alt="UL8" class="site-logo" />
+      <div id="logoFallback" class="logo-fallback" hidden>UL8</div>
+    </div>
+    <p class="eyebrow">UNIVERSALAND // ARCHIVE ACCESS</p>
+    <h1>THE ARCHIVE</h1>
+    <p class="subtitle">Photographic records and recent discoveries.</p>
+  </header>
+
+  <main class="container">
+    <section class="archive-toolbar" aria-label="Informação do arquivo">
+      <span id="archiveCount">ARCHIVE // -- RECORDS</span>
+      <span class="live-dot"><i></i> LIVE DATABASE</span>
+    </section>
+
+    <section id="loadingState" class="state-message">
+      <span class="loader"></span>
+      <p>A carregar o arquivo...</p>
+    </section>
+
+    <section id="errorState" class="state-message error" hidden>
+      <p>Não foi possível carregar o arquivo.</p>
+      <button id="retryButton" class="text-button">TENTAR NOVAMENTE</button>
+    </section>
+
+    <section id="emptyState" class="state-message" hidden>
+      <p>NO RECORDS FOUND.</p>
+    </section>
+
+    <section id="gallery" class="gallery" aria-live="polite"></section>
+  </main>
+
+  <div id="postModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <button id="closeModal" class="modal-close" aria-label="Fechar">×</button>
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-card">
+      <div class="modal-image-wrap" id="modalImageWrap">
+        <img id="modalImage" src="" alt="" />
+        <button id="revealButton" class="reveal-button" hidden>REVEAL CLASSIFIED MATERIAL</button>
+      </div>
+      <div class="modal-content">
+        <p id="modalArchiveId" class="archive-id"></p>
+        <h2 id="modalTitle"></h2>
+        <time id="modalDate"></time>
+        <div class="divider"></div>
+        <p id="modalDescription"></p>
+      </div>
+    </article>
+  </div>
+
+  <footer>
+    <p>UL8 // ARCHIVE TERMINAL</p>
+  </footer>
+
+  <script type="module" src="js/gallery.js"></script>
+</body>
+</html>
